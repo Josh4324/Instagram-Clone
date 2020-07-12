@@ -10,21 +10,19 @@
             <div>
                 <div class="d-flex align-items-center">
                     <div class="pr-4">
-                        <img src="{{$post->user->profile->profileImage()}}" alt="" class="w-100 rounded-circle"
-                            style="max-width:40px">
+                        <img src="{{$post->user->profile->profileImage()}}" alt="" class="w-100 rounded-circle" style="max-width:40px">
                     </div>
                     <div>
-                        <h6>
+                        <h6 class="d-flex align-items-center">
                             <a class="text-dark" href="/profile/{{ $post->user->id}}">{{$post->user->username}}</a>
-                            <a class="pl-3" href="#">Folllow</a>
+                            <follow-button class="pl-3"></follow-button>
                         </h6>
                     </div>
                 </div>
 
                 <hr>
 
-                <p><span class="font-weight-bold"><a class="text-dark"
-                            href="/profile/{{ $post->user->id}}">{{$post->user->username}}</a></span> {{$post->caption}}
+                <p><span class="font-weight-bold"><a class="text-dark" href="/profile/{{ $post->user->id}}">{{$post->user->username}}</a></span> {{$post->caption}}
                 </p>
             </div>
         </div>
